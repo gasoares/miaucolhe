@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button (click)="handleClick(pet)" ion-item *ngFor="let pet of pets">
+      <ion-avatar item-left>
+        <img src="https://www.beatsbydre.com/content/dam/beats/content-blocks/pdp/color-selector/(PRODUCT)RED.jpg">
+      </ion-avatar>
+      <h5>{{ pet.name}}</h5>
+      <p>{{ pet.specie }} - {{ pet.gender }} - {{ pet.age }}</p>
+    </button>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input [(ngModel)]="username" type="text"></ion-input>
+    </ion-item>
+
+    <button (click)="submitUser()" ion-button>Save</button>
+    
+  </ion-list>
+
+  <h3>Username: {{ username }}</h3>
+
+
+
+  <button (click)="launchSecondPage()" ion-button>Next</button>
+</ion-content>

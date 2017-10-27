@@ -14,3 +14,60 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+#menu-containerLinks .scroll-content {
+	margin-top: 135px !important;
+}
+
+#menu-containerLinks .menuLink__icon {
+	color: #888;
+	font-size: 21px;
+	margin-right: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.menuLink__name {
+	display: inline-block;
+    vertical-align: bottom;
+}
+
+.menu__icon-person, 
+.perfil__icon-person {
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	text-align: center;
+	border-radius: 100%;
+	background-color: #424242;
+	color: #FFF;
+	font-size: 20px; 
+}
+
+.menu__icon-person {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+.menu__info-person {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.clearfix {
+	clear: float;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.closeButton {
+    font-size: 23px;
+    margin-right: 10px;
+}

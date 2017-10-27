@@ -3,16 +3,73 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Meu Perfil</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  
+  <div>
+    <ion-list id="menu-list5">
+      <ion-item class="item-avatar" id="menu-list-item17" ui-sref="menu.perfil()" menu-close="">
+        <div class="perfil__icon-person">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <div class="perfil__info-person">
+          <h2>Guilherme Alberto</h2>
+          <p>Dono de 2 pets</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <div class="ownersPet__list">
+    <div id="perfil-container8">
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+      <div class="ownersPet__title">
+        Pets
+      </div>
+
+      <ion-list id="perfil-list11">
+        <ion-item class="item-thumbnail-left item-thumbnail-pet" id="perfil-list-item27">
+          <div class="item-thumbnail-pet-picture">
+            <img src="https://3.bp.blogspot.com/-iXvMxwBxMP4/VsIVBKfhR8I/AAAAAAAACHQ/Bu3CQOL_LEg/s1600/dark%2Bred.png">
+          </div>
+          <div class="item-thumbnail-pet-info">
+            <h2>Rambo</h2>
+            <p>Adotado em 20/03/2017</p>
+          </div>
+        </ion-item>
+        <ion-item class="item-thumbnail-left item-thumbnail-pet" id="perfil-list-item28">
+          <div class="item-thumbnail-pet-picture">
+            <img src="https://3.bp.blogspot.com/-iXvMxwBxMP4/VsIVBKfhR8I/AAAAAAAACHQ/Bu3CQOL_LEg/s1600/dark%2Bred.png">
+          </div>
+
+          <div class="item-thumbnail-pet-info">
+            <h2>Nina</h2>
+            <p>Adotada em 30/05/2016</p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+  <div class="ownersPet__list">
+    <div id="perfil-container8">
+
+      <div class="ownersPet__title ownersPet__titleOng">
+        ONGs
+      </div>
+
+      <ion-list id="perfil-list11">
+        <ion-item class="item-thumbnail-left item-thumbnail-pet" id="perfil-list-item27">
+          <div class="item-thumbnail-pet-info">
+            <h2>ASPAN SABARÁ</h2>
+            <p>Fundada em Novembro de 2001</p>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
 </ion-content>

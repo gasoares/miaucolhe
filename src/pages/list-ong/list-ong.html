@@ -1,0 +1,51 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Lista de ONGs</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-card class="ongList__card" (click)="showONGDetails()">
+
+		<div class="ongList__title">
+			<h2>Sabará Centro de Controle de Zoonoses</h2>
+		</div>
+
+		<ion-item>
+			<ion-icon name="map" item-start></ion-icon>
+			<p>Rua Charles Chaplim, S/N, <br />Rosário, Sabará - MG,<br /> CEP: 34505-620</p>
+		</ion-item>
+
+		<ion-item>
+			<ion-icon name="clock" item-start></ion-icon>
+			<h2>Horário de atendimento</h2>
+			<p>Seg à Sex: <strong>08:00 às 17:00</strong></p>
+		</ion-item>
+
+	</ion-card>
+
+	<ion-card class="ongList__card" (click)="showONGDetails()">
+
+		<div class="ongList__title">
+			<h2>ASPAN - Sabará</h2>
+		</div>
+
+		<ion-item>
+			<ion-icon name="map" item-start></ion-icon>
+			<p>R. Floriano Peixoto Viterbo, 1<br />Centro, Sabará - MG,<br /> 34505-790</p>
+		</ion-item>
+
+		<ion-item>
+			<ion-icon name="clock" item-start></ion-icon>
+			<h2>Horário de atendimento</h2>
+			<p>Seg à Sex: <strong>09:00 às 14:00</strong></p>
+		</ion-item>
+
+	</ion-card>
+
+</ion-content>

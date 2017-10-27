@@ -4,14 +4,29 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-content>
+  <ion-content id="menu-containerLinks">
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <ion-icon [name]="p.icon" class="menuLink__icon"></ion-icon> 
+        <span class="menuLink__name">{{p.title}}</span>
       </button>
     </ion-list>
   </ion-content>
+  
+  <div id="menu-container3" style="margin-top: 65px;">
+    <ion-list id="menu-list5">
+      <ion-item class="item-avatar" id="menu-list-item17" ui-sref="menu.perfil()" menu-close="">
+        <div class="menu__icon-person">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <div class="menu__info-person">
+          <h2>Guilherme Alberto</h2>
+          <p>Dono de 2 pets</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
 
 </ion-menu>
 

@@ -1,0 +1,37 @@
+<ion-content>
+
+	<div class="container">
+
+		<div class="icon">
+			<ion-icon name="paw"></ion-icon>
+		</div>
+
+		<h1 class="title">Miaucolhe</h1>
+
+		<p class="subtitle">Ajude a fazer a vida de um cachorro ou gato melhor!</p>
+
+
+		<div class="form">
+			<ion-list>
+
+
+				<ion-item class="form-row">
+					<ion-input [(ngModel)]="username" type="text" placeholder="E-mail" class="text-input"></ion-input>
+				</ion-item>
+
+				<ion-item class="form-row">
+					<ion-input [(ngModel)]="password" type="password" placeholder="Senha" class="text-input"></ion-input>
+				</ion-item>
+
+
+			</ion-list>
+
+    		<button (click)="submitUser()" ion-button block>Entrar</button>
+
+			<div class="not-account-text">Não possui uma conta?</div>
+			<button ion-button outline block>Criar uma conta</button>
+		</div>
+		
+	</div>
+
+</ion-content>

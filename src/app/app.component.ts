@@ -1,10 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, LoadingController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
+import { PetList } from '../pages/pet-list/pet-list';
+import { ListOngPage } from '../pages/list-ong/list-ong';
+
+import { AuthProvider } from '../providers/auth/auth';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,19 +17,41 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = ListOngPage;
+  loader: any;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public auth: AuthProvider, public loadingCtrl: LoadingController) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Meu Perfil', component: HomePage, icon: 'person' },
+      { title: 'Lista de Pets', component: PetList, icon: 'paw' },
+      { title: 'Lista de ONGs', component: ListOngPage, icon: 'list' }
     ];
 
+    //this.presentLoading();
+
+    this.auth.login().then((isLoggedIn) => {
+      if(!isLoggedIn){
+        //this.rootPage = HomePage;
+      } else {
+        //this.rootPage = LoginPage;
+      }
+
+      //this.loader.dismiss();
+    });
+
+  }
+
+  presentLoading() {
+    this.loader = this.loadingCtrl.create({
+      content: "Autenticando...",
+    });
+
+    this.loader.present();
   }
 
   initializeApp() {

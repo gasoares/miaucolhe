@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pets para Adoção</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pet of pets">
+      <div class="list card" id="listaDePets-card21">
+        <div class="petList_pet-picture">
+          <img src="https://3.bp.blogspot.com/-iXvMxwBxMP4/VsIVBKfhR8I/AAAAAAAACHQ/Bu3CQOL_LEg/s1600/dark%2Bred.png" />
+        </div>
+        <div class="item item-body" id="listaDePets-list-item-container2">
+          <div id="listaDePets-markdown3" class="show-list-numbers-and-dots">
+            <div class="petList_pet-info">
+              <strong>{{ pet.name }}</strong><br />
+              <div class="petList_labels">
+                <div class="petLabel">{{ pet.specietext }}</div>
+                <div class="petLabel">
+                  <ion-icon *ngIf="isFemale(pet.gender)" name="female" class="petList_icon"></ion-icon>
+                  <ion-icon *ngIf="!isFemale(pet.gender)" name="male" class="petList_icon"></ion-icon>
+                  <span>{{ pet.gendertext }}</span>
+                </div>
+                <div class="petLabel">
+                  {{ getAgeText(pet.birth) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <span>{{ noResultsMessage }}</span>
+</ion-content>

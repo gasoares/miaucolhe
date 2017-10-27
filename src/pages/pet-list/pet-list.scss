@@ -1,0 +1,35 @@
+page-pet-list {
+	
+}
+
+.petList_pet-picture img {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.petList_pet-info {
+	padding: 15px 15px 0;
+	line-height: 1;
+	font-size: 14px;
+	color: #515151;
+}
+
+.petLabel {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #fafafa;
+    border: 1px solid #e9e9e9;
+}
+
+.petLabel .petList_icon {
+	font-size: 14px;
+}
+
+.petList_labels {
+	margin-top: 5px;
+}
