@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+
+		<ion-item class="form-row">
+			<ion-input [(ngModel)]="user.name" type="text" placeholder="Nome" class="text-input"></ion-input>
+		</ion-item>
+
+		<ion-item class="form-row">
+			<ion-input [(ngModel)]="user.email" type="email" placeholder="E-mail" class="text-input"></ion-input>
+		</ion-item>
+
+		<ion-item class="form-row">
+			<ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" class="text-input"></ion-input>
+		</ion-item>
+
+	</ion-list>
+
+	<button (tap)="submitUser()" ion-button block>Cadastrar Nova Conta</button>
+
+</ion-content>
