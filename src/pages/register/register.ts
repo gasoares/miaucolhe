@@ -22,54 +22,56 @@ export class RegisterPage {
 		let name = this.user.name;
 		let email = this.user.email;
 		let password = this.user.password;
+		// encrypt password before sending to server
 
 		let proceed = true;
 
-		if (name === undefined || name == null || name == '') {
-			console.log('Por favor, preencha o campo nome!');
+		if (name === undefined || name === null || name == '') {
 			proceed = false;
 		}
 
-		if (email === undefined || email == null || email == '') {
-			console.log('Por favor, preencha o campo email!');
+		if (email === undefined || email === null || email == '') {
 			proceed = false;
 		}
 
-		if (password === undefined || password == null || password == '') {
-			console.log('Por favor, preencha o campo senha!');
+		if (password === undefined || password === null || password == '') {
 			proceed = false;
 		}
 
 		if (proceed) {
-			console.log('Proceed to register user...');
+			let headers = new Headers({ 'Content-Type': 'application/json' });
+			let options = new RequestOptions({ headers: headers });
 
 			this.http.get('http://localhost:3000/api/users/email/' + email)
 			.map(res => res.json())
 			.subscribe(data => {
-				console.log(data);
+
 				if (data === null) {
-					
-					console.log('Connect to API and post...');
-					let headers = new Headers({ 'Content-Type': 'application/json' });
-					let options = new RequestOptions({ headers: headers });
 
 					this.http.post('http://localhost:3000/api/users', this.user, options)
 					.map(res => res.json())
 					.subscribe(data => {
+
 						if (data != null) {
+
 							this.presentToast('Cadastro efetuado com sucesso!');
 							setTimeout(function() {
-								console.log('Redirect user...');
+								// Redirect user here...
 							}, 3000);
+
 						} else {
 							this.showAlert('Atenção', 'Erro ao efetuar cadastro! Por favor, tente novamente.');
 						}
+
 					});
 
 				} else {
 					this.showAlert('Atenção', 'Já existe um usuário cadastrado com este e-mail!');
 				}
+
 			});
+		} else {
+			this.showAlert('Atenção', 'Todos os campos são obrigatórios!');
 		}
 	}
 

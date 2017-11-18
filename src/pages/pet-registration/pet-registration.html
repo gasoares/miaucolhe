@@ -1,0 +1,78 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>Cadastro de Pet</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<div class="form-container">
+		<ion-list>
+
+			<ion-list [(ngModel)]="pet.specie" radio-group>
+				<span class="label-input">Espécie</span>
+
+				<div class="input-no-border">
+					<ion-item>
+						<ion-label>Cachorro</ion-label>
+						<ion-radio checked="false" value="1" ngDefaultControl ></ion-radio>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>Gato</ion-label>
+						<ion-radio checked="false" value="2" ngDefaultControl ></ion-radio>
+					</ion-item>
+				</div>
+			</ion-list>
+
+			<ion-list [(ngModel)]="pet.gender" radio-group>
+				<span class="label-input">Sexo</span>
+
+				<div class="input-no-border">
+					<ion-item>
+						<ion-label>Fêmea</ion-label>
+						<ion-radio checked="false" value="1" ngDefaultControl ></ion-radio>
+					</ion-item>
+
+					<ion-item>
+						<ion-label>Macho</ion-label>
+						<ion-radio checked="false" value="2" ngDefaultControl ></ion-radio>
+					</ion-item>
+				</div>
+			</ion-list>
+
+			<div class="row">
+				<span class="label-input">Nome</span>
+				<ion-item>
+					<ion-input [(ngModel)]="pet.name" type="text" placeholder="Nome" class="text-input"></ion-input>
+				</ion-item>
+			</div>
+
+			<div class="row">
+				<span class="label-input">Data de Nascimento <br /><small>(Usado no cálculo da idade do pet)</small></span>
+				<ion-item>
+					<ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="pet.birth"></ion-datetime>
+				</ion-item>
+			</div>
+
+			<div class="row">
+				<span class="label-input">Cuidados do pet</span>
+				<ion-item>
+					<ion-label>Vacinado?</ion-label>
+					<ion-toggle [(ngModel)]="pet.isVacinado"></ion-toggle>
+				</ion-item>
+				<ion-item>
+					<ion-label>Castrado?</ion-label>
+					<ion-toggle [(ngModel)]="pet.isCastrado"></ion-toggle>
+				</ion-item>
+			</div>
+
+		</ion-list>
+	</div>
+
+	<button (tap)="submitPet()" ion-button block>Cadastrar Novo Pet</button>
+
+</ion-content>

@@ -71,3 +71,44 @@
     font-size: 23px;
     margin-right: 10px;
 }
+
+
+.toolbar-background-md {
+	background-color: #47718e;
+}
+
+.toolbar-title-md {
+	color: #F6F6F6;
+}
+
+.scroll-content {
+	background-color: #f6f6f6;
+}
+
+
+
+.form-container {
+	background-color: #FFF;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.form-container .item-md {
+	padding-left: 0;
+}
+
+.form-container .label-input {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #787889;
+    font-weight: bold;
+}
+
+.form-container .input-no-border .item-md .item-inner {
+	border: 0 none;
+}
+
+.form-container .row {
+	margin-bottom: 15px;
+}

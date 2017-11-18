@@ -1,28 +1,41 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Cadastro</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Cadastro</ion-title>
+	</ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-	<ion-list>
 
-		<ion-item class="form-row">
-			<ion-input [(ngModel)]="user.name" type="text" placeholder="Nome" class="text-input"></ion-input>
-		</ion-item>
+	<div class="form-container">
 
-		<ion-item class="form-row">
-			<ion-input [(ngModel)]="user.email" type="email" placeholder="E-mail" class="text-input"></ion-input>
-		</ion-item>
+		<ion-list>
 
-		<ion-item class="form-row">
-			<ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" class="text-input"></ion-input>
-		</ion-item>
+			<div class="row">
+				<span class="label-input">Nome</span>
+				<ion-item>
+					<ion-input [(ngModel)]="user.name" type="text" placeholder="Nome" class="text-input"></ion-input>
+				</ion-item>
+			</div>
 
-	</ion-list>
+			<div class="row">
+				<span class="label-input">E-mail</span>
+				<ion-item>
+					<ion-input [(ngModel)]="user.email" type="email" placeholder="E-mail" class="text-input"></ion-input>
+				</ion-item>
+			</div>
+
+			<div class="row">
+				<span class="label-input">Senha</span>
+				<ion-item>
+					<ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" class="text-input"></ion-input>
+				</ion-item>
+			</div>
+
+		</ion-list>
+	</div>
 
 	<button (tap)="submitUser()" ion-button block>Cadastrar Nova Conta</button>
 

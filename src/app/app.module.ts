@@ -13,6 +13,7 @@ import { ListOngPage } from '../pages/list-ong/list-ong';
 import { OngInfoPage } from '../pages/ong-info/ong-info';
 import { PetInfoPage } from '../pages/pet-info/pet-info';
 import { RegisterPage } from '../pages/register/register';
+import { PetRegistrationPage } from '../pages/pet-registration/pet-registration';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { AuthProvider } from '../providers/auth/auth';
     ListOngPage,
     TestePage,
     PetInfoPage,
-    RegisterPage
+    RegisterPage,
+    PetRegistrationPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { AuthProvider } from '../providers/auth/auth';
     ListOngPage,
     TestePage,
     PetInfoPage,
-    RegisterPage
+    RegisterPage,
+    PetRegistrationPage
   ],
   providers: [
     StatusBar,
